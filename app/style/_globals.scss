@@ -1,0 +1,155 @@
+@import "variables";
+@import "mixins";
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+* , *::before , *::after {
+    box-sizing: inherit;
+}
+p{  
+    font-size: 0.875rem;
+    @include breakpoint-up(medium){
+        font-size: 1.035rem;
+    }
+    
+    line-height: 1.5;
+    margin-bottom: 2.25rem;
+    margin-top: 0px;
+}
+h1,h2,h3{
+    font-weight: 300;
+    line-height: 1.2;
+    color: $Dark;
+    margin-top: 0px;
+}
+h1{
+    font-size: 2.3125rem;
+    margin-bottom: 1.5rem;
+    @include breakpoint-up(large){
+      font-size: $fontxlr;
+    }
+}
+h2{
+    @include breakpoint-up(large){
+        font-size: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+    font-size: 1.875rem;
+    margin-bottom: 1.5625rem;
+}
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    font-size: $fontsm;
+    font-weight: 300;
+    color: $Grayish;
+    font-family: 'Public Sans', sans-serif;
+    overflow-x: hidden;
+    @include breakpoint-up(large){
+        font-size: $fontmd;
+      }
+    &.noscroll{
+        overflow: hidden;
+    }
+}
+
+a,a:visited{
+    text-decoration: none;
+   
+}
+
+//FlexBox
+.flex{
+
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+//buttons
+.button {
+    padding: 0.875rem 2.1875rem;
+    border-radius: 50px;
+    background: linear-gradient(to right,$Lime,$Bright);
+    font-weight: 400;
+    display: inline-block;
+
+}
+.container{
+    max-width: 69.375rem;
+    margin: auto;
+  &-mlr{
+        margin-left: 7.46rem;
+        margin-right: 7.46rem;
+    }
+  &-ml{
+      margin-left: 7.46rem;
+  }
+  &-mr{
+    margin-right: 7.46rem;
+  }
+   &-pall{
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    @include breakpoint-up(large){
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+   }
+   &-px{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+   }
+   &-py{
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    @include breakpoint-up(large){
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+   }
+   &-pt{
+    padding-top: 4.375rem;
+    @include breakpoint-up(large){
+        padding-top: 6rem;
+    }
+   }
+   &-pb{
+    padding-bottom: 4.375rem;
+    @include breakpoint-up(large){
+        padding-bottom: 6rem;
+    }
+   }
+   &-pl{
+    padding-left: 1.5rem;
+   }
+   &-pr{
+    padding-right: 1.5rem;
+   }
+}
+
+.hide-for-mobiles{
+  @include breakpoint-down(medium){
+  display: none;
+  }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+    display: none;
+    }
+}
+

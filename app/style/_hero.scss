@@ -1,0 +1,88 @@
+.hero{
+   background-color: $Very;
+   .container{
+    @include breakpoint-up(large){
+      display: flex;
+      align-items: center;
+       }
+   }
+  
+
+ 
+ 
+   &__image{
+    
+     position: relative;
+     background-image: url('/images/bg-intro-mobile.svg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     min-height: 17.5rem;
+
+    @include breakpoint-up(medium){
+      min-height: 28.56rem;
+    }
+
+     @include breakpoint-up(large){
+      flex: 3;
+      order: 2;
+      min-height: 41rem;
+      background-image: none;
+      //background-image: url('/images/bg-intro-desktop.svg');
+      //background-position: left center;
+     }
+
+     &::before{
+    
+      @include breakpoint-up(large){
+        content: "";
+        position: absolute;
+        background-image:url('/images/bg-intro-desktop.svg');
+        height: 100%;
+        width: 100%;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        width: 150%;
+        background-size: 129%;
+        background-position: 11% 76%;
+      }
+
+     }
+
+     &::after{
+       content: "";
+       position: absolute;
+       background-image:url('/images/image-mockups.png');
+       height: 100%;
+       width: 100%;
+       background-position: bottom center;
+     //  border: 2px solid black;
+       background-size: 93%;
+       background-repeat: no-repeat;
+
+       @include breakpoint-up(large){
+        width: 120%;
+        height: 122%;
+        background-image: url('/images/image-mockups.png');
+        background-size: 94%;
+        background-repeat: no-repeat;
+        background-position: center 150%;
+        left: 22%;
+       }
+     }
+    
+   }
+
+   &__content{
+      text-align: center;
+      @include breakpoint-up(large){
+      text-align: left;
+      flex: 2;
+      order: 1;
+     }
+      
+   }
+
+  
+}
+
