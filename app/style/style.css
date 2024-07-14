@@ -418,7 +418,7 @@ a, a:visited {
 
 .hero__image {
   position: relative;
-  background-image: url("images/bg-intro-mobile.svg");
+  background-image: url("../../images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -448,7 +448,7 @@ a, a:visited {
   .hero__image::before {
     content: "";
     position: absolute;
-    background-image: url("/images/bg-intro-desktop.svg");
+    background-image: url("../../images/bg-intro-desktop.svg");
     height: 100%;
     width: 100%;
     background-position: bottom center;
@@ -462,7 +462,7 @@ a, a:visited {
 .hero__image::after {
   content: "";
   position: absolute;
-  background-image: url("/images/image-mockups.png");
+  background-image: url("../../images/image-mockups.png");
   height: 100%;
   width: 100%;
   background-position: bottom center;
@@ -474,7 +474,7 @@ a, a:visited {
   .hero__image::after {
     width: 120%;
     height: 122%;
-    background-image: url("/images/image-mockups.png");
+    background-image: url("../../images/image-mockups.png");
     background-size: 94%;
     background-repeat: no-repeat;
     background-position: center 150%;
